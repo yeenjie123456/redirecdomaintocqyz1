@@ -1,25 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <style>
+        /* 定义按钮样式 */
+        button {
+          /* 设置背景颜色 */
+          background-color: white;
+          /* 设置文本颜色 */
+          color: red;
+          /* 设置圆角 */
+          border-radius: 5px;
+        }
+            /* 定义倒计时文本样式 */
+    
+        #countdown {
+        /* 设置字体大小 */
+        font-size: 36px;
+        /* 设置字体颜色 */
+        color: red;
+      }
+  
+      </style>    
     <meta charset="utf-8">
     <title>重定向至重庆一中</title>
-    <meta http-equiv="refresh" content="7; url=https://www.cqyz.cn/">
+    <meta http-equiv="refresh" content="8; url=https://www.cqyz.cn/">
 </head>
 <body>
-    This page will be redirected to cqyz in <br>
-    该网页会被重定向至 重庆一中 在
-    <h2 id="countdown">8</h2>
-    <script type="text/javascript">
-        var countdown = 8;
-        setInterval(function() {
-            countdown--;
-            document.getElementById("countdown").innerHTML = countdown;
-        }, 1000);
-    </script> seconds. <br>
+    This page will be automaticly redirected to cqyz in <br>
+    该网页会被自动重定向至 重庆一中 在
+  <!-- 创建一个倒计时文本 -->
+  <p id="countdown">8</p>
+
+  <script>
+    // 定义计时器
+    var countdown = 7;
+
+    // 定义倒计时函数
+    function startCountdown() {
+      // 如果倒计时结束，停止计时器
+      if (countdown == 0) {
+        clearInterval(countdown);
+      } else {
+        // 否则，更新倒计时显示
+        document.getElementById("countdown").innerHTML = countdown;
+        countdown--;
+      }
+    }
+
+    // 启动计时器，每秒执行一次倒计时函数
+    setInterval(startCountdown, 1000);
+  </script>
+    seconds. <br>
     秒以后。<br>
-    <a href="https://www.cqyz.cn/">点我手动跳转 Click me to redirect manually</a>
-    <h3>Powered by Enjie Ye.</h3>
+    <a href="https://www.cqyz.cn/">
+        <button>点我手动跳转 Click me to redirect manually</button>
+    </a>
+    <h3>Powered by Enjie Ye.<br>由 叶恩杰 强力驱动。</h3>
 </body>
 </html>
+
 
 
